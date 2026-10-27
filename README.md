@@ -2,6 +2,8 @@
 
 公開時刻同期API [public-api.siyukatu.com](https://public-api.siyukatu.com/) で時刻を補正して表示する、シンプルなオンライン時計です。
 
+**公開サイト:** [https://hamuzon.github.io/clock-app-api-Version/](https://hamuzon.github.io/clock-app-api-Version/)
+
 右下の小さなランプだけで通信状態を表示します。
 
 ## 通信状態ランプ
