@@ -37,6 +37,10 @@
 - `404.html` - 404ページ
 - `icon.svg` / `favicon.ico` など - アイコン
 
+## TIME API について
+
+[public time API の解説記事（Zenn）](https://zenn.dev/siyukatu/articles/public-time-api)
+
 ## 免責
 
 時刻APIは外部サービスです。停止・仕様変更により正しく表示されない場合があります。
@@ -44,3 +48,8 @@
 ## ライセンス
 
 [LICENSE](LICENSE)
+
+---
+
+*README 作成 By AI*
+*README Created By AI*
