@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <title>Clock | Online Clock</title>
+
+    <meta name="description" content="時刻同期APIで補正した現在時刻を表示するシンプルなオンライン時計です。 A simple online clock synced with a public time API.">
+    <meta name="keywords" content="時計,オンライン時計,現在時刻,デジタル時計,Clock,Online Clock,Current Time,Digital Clock">
+    <meta name="author" content="Clock">
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://hamuzon.github.io/clock-app-api-Version/">
+
+    <meta property="og:title" content="Clock - 現在時刻を表示する時計 | Online Clock">
+    <meta property="og:description" content="時刻同期APIで補正した現在時刻を表示するシンプルなオンライン時計です。 A simple online clock synced with a public time API.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hamuzon.github.io/clock-app-api-Version/">
+    <meta property="og:site_name" content="Clock">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Clock - 現在時刻を表示する時計">
+    <meta name="twitter:description" content="時刻同期APIで補正した現在時刻を表示するシンプルなオンライン時計です。 A simple online clock synced with a public time API.">
+
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://public-api.siyukatu.com" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="clock">
+            <div id="center">
+                <div id="time">00:00:00</div>
+                <div id="date">00/00/00</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="status" role="status" aria-label="接続中" title="接続中" data-state="connecting"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

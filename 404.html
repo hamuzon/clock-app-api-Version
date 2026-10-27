@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>404 - Page Not Found</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: 
+                border-box;
+        }
+        ::selection {
+            background: 
+                rgba(255, 255, 255, 0.3);
+            color: 
+                #fff;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 
+                100vh;
+            background: 
+                black;
+            color: 
+                white;
+            font-family: 
+                'Potta One', 
+                sans-serif;
+            -webkit-user-select: 
+                none;
+            user-select: 
+                none;
+            display: 
+                flex;
+            align-items: 
+                center;
+            justify-content: 
+                center;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            display: 
+                flex;
+            align-items: 
+                center;
+            justify-content: 
+                center;
+        }
+
+        .container {
+            background: 
+                rgba(255, 255, 255, 0.07);
+            -webkit-backdrop-filter: 
+                blur(10px);
+            backdrop-filter: 
+                blur(10px);
+            border: 
+                1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 
+                24px;
+            padding: 
+                3rem 2rem;
+            max-width: 
+                480px;
+            width: 
+                90%;
+            box-shadow: 
+                0 0 40px rgba(255, 255, 255, 0.05);
+            text-align: 
+                center;
+        }
+
+        h1 {
+            font-size: 
+                5rem;
+            font-weight: 
+                700;
+            color: 
+                white;
+            text-shadow: 
+                0 0 20px rgba(255, 255, 255, 0.2);
+            margin-bottom: 
+                0.5rem;
+            line-height: 
+                1.2;
+        }
+
+        .message {
+            font-size: 
+                1.2rem;
+            color: 
+                rgba(255, 255, 255, 0.9);
+            margin-bottom: 
+                2.5rem;
+            line-height: 
+                1.6;
+        }
+
+        .message span {
+            font-size: 
+                0.9em;
+            opacity: 
+                0.8;
+        }
+
+        .back-btn {
+            display: 
+                inline-block;
+            background: 
+                rgba(255, 255, 255, 0.1);
+            border: 
+                2px solid white;
+            border-radius: 
+                20px;
+            color: 
+                white;
+            text-decoration: 
+                none;
+            padding: 
+                0.8rem 2rem;
+            font-size: 
+                1.1rem;
+            font-weight: 
+                600;
+            transition: 
+                all 0.2s ease;
+        }
+
+        .back-btn:hover {
+            background: 
+                white;
+            color: 
+                black;
+            transform: 
+                translateY(-2px);
+            box-shadow: 
+                0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .footer {
+            font-size: 
+                0.8rem;
+            color: 
+                rgba(255, 255, 255, 0.6);
+            margin-top: 
+                2rem;
+            border-top: 
+                1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 
+                1rem;
+            opacity: 
+                0.8;
+        }
+
+        .footer a {
+            color: 
+                white;
+            text-decoration: 
+                none;
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3.5rem; }
+            .message { font-size: 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            <h1>404</h1>
+            <p class="message">ページが見つかりませんでした<br><span>Sorry, Page Not Found.</span></p>
+<a id="backLink" class="back-btn" href="/">トップページへ戻る</a>
+            <div class="footer"
+                 id="footer-copy"></div>
+        </div>
+    </div>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const backLink = document
+        .getElementById('backLink')
+
+      const hostname = location
+        .hostname
+
+      const pathname = location
+        .pathname
+
+      if (hostname === 'hamuzon.github.io') {
+        if (pathname.includes('/clock-app-api-Version/')) {
+          backLink.href = '/clock-app-api-Version/'
+        }
+      }
+    })
+    
+
+// Footer Logic
+(function(){
+  const baseYear = 2025
+  const currentYear = new Date()
+    .getFullYear()
+
+  const hostname = location
+    .hostname
+
+  const footer = document
+    .getElementById("footer-copy")
+
+  let footerHTML = ""
+  
+  let yearStr = baseYear
+    .toString()
+
+  if (currentYear > baseYear) {
+    yearStr = `${baseYear}~${currentYear}`
+  } else if (currentYear < baseYear) {
+    yearStr = `${currentYear}~${baseYear}`
+  }
+  
+  if(hostname === "hamuzon.github.io"){
+    footerHTML = `&copy; ${yearStr} <a href="https://hamuzon.github.io" target="_blank">@hamuzon</a>`
+  } else if (
+    hostname.includes("hamuzon-jp.f5.si")
+  ) {
+    footerHTML = `&copy; ${yearStr} <a href="https://hamuzon-jp.f5.si" target="_blank">@hamuzon</a>`
+  } else if(hostname.includes("hamusata.f5.si")){
+    footerHTML = `&copy; ${yearStr} <a href="https://hamusata.f5.si" target="_blank">@hamusata</a>`
+  } else {
+    footerHTML = `&copy; ${yearStr} Clock App`
+  }
+  
+  if(footer) {
+    footer.innerHTML = footerHTML
+  }
+})()
+    </script>
+</body>
+
+</html>
