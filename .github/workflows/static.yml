@@ -32,7 +32,7 @@ jobs:
       GA_MEASUREMENT_ID: G-F8HVYVW05H
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: 'main'
 
