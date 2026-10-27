@@ -41,4 +41,4 @@
 
 ## ライセンス
 
-[MIT](LICENSE)
+[LICENSE](LICENSE)
