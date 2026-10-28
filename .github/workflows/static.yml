@@ -70,7 +70,7 @@ jobs:
           rm -rf functions README.md README readme.md license LICENSE LICENSE.txt _redirects.md _redirects
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           # Upload entire repository
           path: '.'
